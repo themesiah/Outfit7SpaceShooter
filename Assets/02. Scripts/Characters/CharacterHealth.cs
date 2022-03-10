@@ -8,13 +8,25 @@ namespace SpaceShooter.Actors
         [SerializeField]
         private UnityEvent OnDie = default;
 
+        [SerializeField]
+        private UnityEvent<int> OnReceiveDamage = default;
+
+        [SerializeField]
+        private UnityEvent<int> OnHealed = default;
+
         public void Die()
         {
             OnDie?.Invoke();
         }
 
-        public abstract void Heal(int heal);
+        public virtual void Heal(int heal)
+        {
+            OnHealed?.Invoke(heal);
+        }
 
-        public abstract void TakeDamage(int damage);
+        public virtual void TakeDamage(int damage)
+        {
+            OnReceiveDamage?.Invoke(damage);
+        }
     }
 }

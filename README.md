@@ -27,7 +27,7 @@ of what have you done and main challenges you had at development of the game.
 6. Moving background :white_check_mark:
 7. Bullet pattern structure (shot manager, emitter, bullet) :white_check_mark:
 8. GPU instanced bullets :white_check_mark:
-9. Score system  with ui and combo :x:
+9. Score system  with ui and combo :white_check_mark:
 10. Collision with enemies and obstacles :x:
 11. Fuel item, powerup item, speed item, bomb item :x:
 12. Bomb (big bullet, needs currency) :x:

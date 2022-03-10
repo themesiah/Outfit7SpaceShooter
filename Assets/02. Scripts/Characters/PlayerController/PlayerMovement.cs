@@ -43,7 +43,6 @@ namespace SpaceShooter.Actors
         {
             // Get movement values from input system
             var values = context.ReadValue<Vector2>();
-            SimpleLogger.Instance.Log(SimpleLogger.LogContext.PlayerController, "Movement Values are {0}x {1}y", values.x, values.y);
             // Check if we are moving. We will use this in the update to consume fuel.
             if (values.x != 0f || values.y != 0f)
                 moving = true;

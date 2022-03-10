@@ -30,12 +30,14 @@ namespace SpaceShooter.Actors
         // Called when getting fuel
         public override void Heal(int heal)
         {
+            base.Heal(heal);
             fuelReference.SetValue(fuelReference.GetValue() + heal);
         }
 
         // Called when receiving hits or colliding with enemies
         public override void TakeDamage(int damage)
         {
+            base.TakeDamage(damage);
             fuelReference.SetValue(fuelReference.GetValue() - damage);
         }
 

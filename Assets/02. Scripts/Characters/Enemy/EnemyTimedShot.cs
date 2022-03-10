@@ -13,16 +13,6 @@ namespace SpaceShooter.Actors
 
         float timer = 0f;
 
-        private void OnBecameVisible()
-        {
-            enabled = true;
-        }
-
-        private void OnBecameInvisible()
-        {
-            enabled = false;
-        }
-
         private void Update()
         {
             timer += Time.deltaTime;

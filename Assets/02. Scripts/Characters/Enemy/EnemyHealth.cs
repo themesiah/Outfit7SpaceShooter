@@ -11,6 +11,7 @@ namespace SpaceShooter.Actors
 
         public override void Heal(int heal)
         {
+            base.Heal(heal);
             health = health + heal;
             if (health > maxHealth)
                 health = maxHealth;
@@ -18,6 +19,7 @@ namespace SpaceShooter.Actors
 
         public override void TakeDamage(int damage)
         {
+            base.TakeDamage(damage);
             health -= damage;
             if (health <= 0)
             {

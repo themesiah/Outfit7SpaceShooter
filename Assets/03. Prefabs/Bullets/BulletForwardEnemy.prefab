@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2100002144705213077}
   - component: {fileID: 1983112459485244763}
   - component: {fileID: 6484707980140461308}
+  - component: {fileID: 2948099109120397781}
   m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
@@ -81,6 +82,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2948099109120397781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7025485914543590230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dfb7c2e081a75c40a525d26fd0533b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnVisible:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInvisible:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8316902688369845206}
+        m_TargetAssemblyTypeName: GamedevsToolbox.ScriptableArchitecture.Pools.PoolObjectDestroyer,
+          GamedevsToolbox
+        m_MethodName: Free
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7145045088935838062
 GameObject:
   m_ObjectHideFlags: 0

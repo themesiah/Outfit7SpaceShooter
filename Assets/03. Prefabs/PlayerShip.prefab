@@ -45,6 +45,156 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6810670235136198581}
   bulletContainer: {fileID: 4595091692542162878}
+--- !u!1 &5705568628189513329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5559322119598753700}
+  - component: {fileID: 6897023412968556809}
+  - component: {fileID: 8153195985668115434}
+  - component: {fileID: 5440398034491061768}
+  - component: {fileID: 4912798579726265331}
+  m_Layer: 6
+  m_Name: InputListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5559322119598753700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705568628189513329}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7056687228302649988}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6897023412968556809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705568628189513329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ff45fe805953f941bbd9602d8a60fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: c81e2af9499df6c4dbf3301ced90b941, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7056687228302649990}
+        m_TargetAssemblyTypeName: SpaceShooter.Actors.PlayerMovement, SpaceShooterAssembly
+        m_MethodName: Accelerate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  eventOnlyOnPerformed: 0
+--- !u!114 &8153195985668115434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705568628189513329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ff45fe805953f941bbd9602d8a60fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d4f8413fe164e104cb93d03862bb5581, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7056687228302649990}
+        m_TargetAssemblyTypeName: SpaceShooter.Actors.PlayerMovement, SpaceShooterAssembly
+        m_MethodName: Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  eventOnlyOnPerformed: 0
+--- !u!114 &5440398034491061768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705568628189513329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ff45fe805953f941bbd9602d8a60fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 05e33571a8dbfa1409b6d55267a178f4, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7660234717757424232}
+        m_TargetAssemblyTypeName: SpaceShooter.Actors.PlayerShotManager, SpaceShooterAssembly
+        m_MethodName: Shot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  eventOnlyOnPerformed: 0
+--- !u!114 &4912798579726265331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705568628189513329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ff45fe805953f941bbd9602d8a60fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 658f4b9a1499d314db66e70ebd26f879, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7056687228302649991}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  eventOnlyOnPerformed: 0
 --- !u!1 &6954015776006807563
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,7 +250,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7056687228302649988}
   - component: {fileID: 7056687228302649989}
-  - component: {fileID: 7056687228302649987}
   - component: {fileID: 4668138047943749739}
   - component: {fileID: 7056687228302649990}
   - component: {fileID: 7056687228302649986}
@@ -125,6 +274,7 @@ Transform:
   m_Children:
   - {fileID: 2635968539581358694}
   - {fileID: 3370716740585724672}
+  - {fileID: 5559322119598753700}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -144,19 +294,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 1
---- !u!65 &7056687228302649987
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7056687228302649991}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6.212631, y: 1.529643, z: 3}
-  m_Center: {x: 1.2959118, y: 0.26482153, z: 0}
 --- !u!65 &4668138047943749739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -211,6 +348,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnDie:
+    m_PersistentCalls:
+      m_Calls: []
+  OnReceiveDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 291f70b189066a6448b01e06ad49c8bc, type: 2}
+        m_TargetAssemblyTypeName: GamedevsToolbox.ScriptableArchitecture.Events.GameEvent,
+          GamedevsToolbox
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnHealed:
     m_PersistentCalls:
       m_Calls: []
   fuelReference:

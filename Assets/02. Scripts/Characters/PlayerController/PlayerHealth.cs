@@ -10,7 +10,7 @@ namespace SpaceShooter.Actors
         private ScriptableFloatReference fuelReference = default;
 
         [SerializeField]
-        private float fuelMaxValue = default;
+        private ScriptableFloatReference fuelMaxValueRef = default;
 
         private void OnEnable()
         {
@@ -24,7 +24,7 @@ namespace SpaceShooter.Actors
 
         private void Awake()
         {
-            fuelReference.SetValue(fuelMaxValue);
+            fuelReference.SetValue(fuelMaxValueRef.GetValue());
         }
 
         // Called when getting fuel
@@ -41,15 +41,10 @@ namespace SpaceShooter.Actors
 
         private void OnFuelChanged(float newValue)
         {
-            if (fuelReference.GetValue() <= 0f)
+            if (newValue <= 0f)
             {
                 // If fuel reaches 0 the player dies
                 Die();
-            }
-            else if (fuelReference.GetValue() > fuelMaxValue)
-            {
-                // Clamp fuel value
-                fuelReference.SetValue(fuelMaxValue);
             }
         }
     }

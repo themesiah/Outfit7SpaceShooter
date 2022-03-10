@@ -15,3 +15,5 @@ MonoBehaviour:
   value: -30.440804
   defaultValue: 100
   resetOnAwake: 0
+  maxValue: 100
+  useMaxValue: 1

@@ -7,7 +7,9 @@ namespace SpaceShooter.Utils
         [System.Flags]
         public enum LogContext
         {
-            PlayerController = (1 << 0)
+            PlayerController = (1 << 0),
+            UI = (1 << 1),
+            Battle = (1 << 2)
         }
 
         [System.Flags]

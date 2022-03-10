@@ -34,7 +34,7 @@ namespace GamedevsToolbox.ScriptableArchitecture.Values
             return value;
         }
 
-        public void SetValue(T value)
+        public virtual void SetValue(T value)
         {
             lastValue = this.value;
             this.value = value;

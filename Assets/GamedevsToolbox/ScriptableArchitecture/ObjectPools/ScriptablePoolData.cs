@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace GamedevsToolbox.ScriptableArchitecture.Pools
 {
@@ -19,6 +17,9 @@ namespace GamedevsToolbox.ScriptableArchitecture.Pools
 
         [SerializeField]
         private GameObject prefabToInstantiate = default;
+
+        [SerializeField]
+        private AssetReference referenceToInstantiate = default;
 
         [SerializeField]
         private Values.ScriptableIntReference numberOfInstances = default;
@@ -39,5 +40,6 @@ namespace GamedevsToolbox.ScriptableArchitecture.Pools
         public int DynamicMaxInstances => dynamicMaxInstances.GetValue();
         public int DynamicInstancePace => dynamicInstancePace.GetValue();
         public GameObject Prefab => prefabToInstantiate;
+        public AssetReference PrefabReference => referenceToInstantiate;
     }
 }

@@ -10,12 +10,12 @@ namespace GamedevsToolbox.ScriptableArchitecture.Pools
         private const string POOL_PARENT_NAME = "----[POOL {0} OBJECTS]----";
 
         [SerializeField]
-        private ScriptablePoolData data = default;
+        protected ScriptablePoolData data = default;
 
-        private GameObject[] instances;
+        protected GameObject[] instances;
         private List<GameObject> usedInstances;
-        private Queue<GameObject> freeInstances;
-        private Transform poolParent = null;
+        protected Queue<GameObject> freeInstances;
+        protected Transform poolParent = null;
 
         private bool isInitialized = false;
 
@@ -24,6 +24,7 @@ namespace GamedevsToolbox.ScriptableArchitecture.Pools
         {
             if (isInitialized == true)
                 return;
+            isInitialized = true;
             GetPoolParent();
             instances = new GameObject[data.NumberOfInstances];
             usedInstances = new List<GameObject>();
@@ -33,7 +34,6 @@ namespace GamedevsToolbox.ScriptableArchitecture.Pools
             {
                 CreateInstanceOnIndex(i);
             }
-            isInitialized = true;
         }
 
         public GameObject GetInstance(Transform instanceParent = null, Vector3 instancePosition = default, Quaternion instanceRotation = default)
@@ -142,18 +142,18 @@ namespace GamedevsToolbox.ScriptableArchitecture.Pools
                 GameObject p = GameObject.Find(poolName);
                 if (p == null)
                 {
-                    p = GameObject.Instantiate(new GameObject());
-                    p.name = poolName;
+                    p = new GameObject(poolName);
                     p.SetActive(false);
                 }
                 poolParent = p.transform;
             }
         }
 
-        private void CreateInstanceOnIndex(int index)
+        protected virtual void CreateInstanceOnIndex(int index)
         {
             instances[index] = GameObject.Instantiate(data.Prefab, poolParent);
             freeInstances.Enqueue(instances[index]);
+            instances[index].GetComponent<PoolObjectDestroyer>()?.InitWithPool(this);
         }
 
         private GameObject GetFreeInstance()

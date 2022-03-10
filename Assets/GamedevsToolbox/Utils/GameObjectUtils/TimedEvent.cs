@@ -11,9 +11,14 @@ namespace GamedevsToolbox.Utils
         [SerializeField]
         private float delay = 1f;
 
-        private void Start()
+        private void OnEnable()
         {
             StartCoroutine(TimedEventCoroutine());
+        }
+
+        private void OnDisable()
+        {
+            StopAllCoroutines();
         }
 
         private IEnumerator TimedEventCoroutine()

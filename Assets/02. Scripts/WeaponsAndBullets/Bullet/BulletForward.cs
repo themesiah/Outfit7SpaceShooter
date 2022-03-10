@@ -6,12 +6,17 @@ namespace SpaceShooter.WeaponsAndBullets
     {
         [SerializeField]
         private Rigidbody bulletBody = default;
-
-        public Vector3 velocity = default;
+        [SerializeField]
+        private float speed = default;
 
         public void StartMovement()
         {
-            bulletBody.velocity = transform.worldToLocalMatrix.inverse * velocity;
+            bulletBody.velocity = transform.right * speed;
+        }
+
+        public void SetSpeed(float newSpeed)
+        {
+            speed = newSpeed;
         }
     }
 }

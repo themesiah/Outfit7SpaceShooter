@@ -117,7 +117,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 2945093134685685933}
   bulletContainerReference: {fileID: 11400000, guid: a6e771eb0d685334189bcb6afecbea14, type: 2}
-  bulletsPerStack: 10
+  numberOfBursts: 3
+  timeBetweenBursts: 0.3
+  bulletsPerStack: 3
   minMaxStackSpeed: {x: 30, y: 50}
   arcRows: 3
   arcAngle: 45

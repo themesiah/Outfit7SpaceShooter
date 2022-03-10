@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using GamedevsToolbox.ScriptableArchitecture.Values;
-using SpaceShooter.Utils;
 
 namespace SpaceShooter.Actors
 {

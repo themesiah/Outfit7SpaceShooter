@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using SpaceShooter.Actors;
 using SpaceShooter.Utils;
 using GamedevsToolbox.ScriptableArchitecture.Pools;
@@ -14,6 +15,9 @@ namespace SpaceShooter.WeaponsAndBullets
         [SerializeField]
         private PoolObjectDestroyer poolObjectDestroyer = default;
 
+        [SerializeField]
+        private UnityEvent OnCollided = default;
+
         private void OnTriggerEnter(Collider other)
         {
             // Not checking for tags because the physics collision matrix already manages colliding with only the necessary objects
@@ -21,6 +25,7 @@ namespace SpaceShooter.WeaponsAndBullets
             IDamageable damageable = other.GetComponent<IDamageable>();
             damageable?.TakeDamage(damage.GetValue());
             poolObjectDestroyer.Free();
+            OnCollided?.Invoke();
         }
     }
 }

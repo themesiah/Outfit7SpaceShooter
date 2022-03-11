@@ -41,6 +41,6 @@ of what have you done and main challenges you had at development of the game.
 20. Destroyable enemy bullets :x:
 21. Raise difficulty over time :x:
 22. Evasive enemy (high health, moves evading your forward, big threat) :x:
-23. Visual feedback (explosion on deaths, mini-explosion on bullet hit) :x:
+23. Visual feedback (explosion on deaths, mini-explosion on bullet hit, bomb explosion) :x:
 24. SFX :x:
 25. BGM :x:

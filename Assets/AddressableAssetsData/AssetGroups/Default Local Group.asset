@@ -41,6 +41,10 @@ MonoBehaviour:
     m_Address: Obtainables/Bomb
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: d2f73e8f5e1058a429b5a0605a46d697
+    m_Address: Bullets/Bomb
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d60b2ce7ad746e2478e7d30483a26f17, type: 2}
   m_SchemaSet:

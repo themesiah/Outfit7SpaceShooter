@@ -182,13 +182,13 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7056687228302649991}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 9104775432128744039}
+        m_TargetAssemblyTypeName: SpaceShooter.Actors.PlayerBombManager, SpaceShooterAssembly
+        m_MethodName: LaunchBomb
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 7056687228302649990}
   - component: {fileID: 7056687228302649986}
   - component: {fileID: 7660234717757424232}
+  - component: {fileID: 9104775432128744039}
   m_Layer: 6
   m_Name: PlayerShip
   m_TagString: Untagged
@@ -275,6 +276,7 @@ Transform:
   - {fileID: 2635968539581358694}
   - {fileID: 3370716740585724672}
   - {fileID: 5559322119598753700}
+  - {fileID: 2972747310916177239}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -339,7 +341,7 @@ MonoBehaviour:
       useConstant: 1
       value: {fileID: 0}
       constantValue: {x: 0, y: 0}
-  moveSpeedAccelerated: 45
+  acceleratedSpeedMultiplier: 2
   accelerationFuelConsumptionRate: 1
   maxTurningAngle: 30
   turningSpeed: 150
@@ -424,6 +426,91 @@ MonoBehaviour:
   OnShotsEmitted:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9104775432128744039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056687228302649991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797732ac8263e734597a269fea4f9d56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombCountReference:
+    useConstant: 0
+    value: {fileID: 11400000, guid: a6d910ca8ae35b442a6ff9593712bcb4, type: 2}
+    constantValue: 0
+    useRandom: 0
+    minMax:
+      useConstant: 1
+      value: {fileID: 0}
+      constantValue: {x: 0, y: 0}
+  bombEmitter: {fileID: 5282347251814161350}
+  OnBombEmitted:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &8394111591082713046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2972747310916177239}
+  - component: {fileID: 5282347251814161350}
+  - component: {fileID: 525012980104552333}
+  m_Layer: 6
+  m_Name: BombEmitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2972747310916177239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8394111591082713046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.74, y: 0.23, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7056687228302649988}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5282347251814161350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8394111591082713046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96558bd5c0f3ec8459b0854279bdcfcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 2972747310916177239}
+  bulletContainer: {fileID: 525012980104552333}
+--- !u!114 &525012980104552333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8394111591082713046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbed5888eb502f54cbdf31c6ce66f3ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool:
+    data: {fileID: 11400000, guid: e47f09130e61f3745a17eb474b722b5a, type: 2}
 --- !u!1 &8764100715924223942
 GameObject:
   m_ObjectHideFlags: 0

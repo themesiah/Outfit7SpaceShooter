@@ -1,4 +1,5 @@
 using GamedevsToolbox.ScriptableArchitecture.Values;
+using SpaceShooter.Extensions;
 using SpaceShooter.WeaponsAndBullets;
 using UnityEngine;
 using UnityEngine.Events;
@@ -6,7 +7,7 @@ using UnityEngine.InputSystem;
 
 namespace SpaceShooter.Actors
 {
-    public class PlayerBombManager : MonoBehaviour
+    public class PlayerBombManager : PausableObject
     {
         [SerializeField]
         private ScriptableIntReference bombCountReference = default;
@@ -19,7 +20,7 @@ namespace SpaceShooter.Actors
 
         public void LaunchBomb(InputAction.CallbackContext context)
         {
-            if (context.started)
+            if (context.started && !paused)
             {
                 if (bombCountReference.GetValue() > 0)
                 {

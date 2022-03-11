@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SpaceShooter.Obtainables
 {
-    public class BombObtainable : MonoBehaviour
+    public class BombObtainable : MonoBehaviour, IObtainable
     {
         [SerializeField]
         private ScriptableIntReference bombCountReference = default;

@@ -5,10 +5,11 @@ using UnityEngine.InputSystem;
 using GamedevsToolbox.ScriptableArchitecture.Values;
 using UnityEngine.Events;
 using SpaceShooter.WeaponsAndBullets;
+using SpaceShooter.Extensions;
 
 namespace SpaceShooter.Actors
 {
-    public class PlayerShotManager : MonoBehaviour
+    public class PlayerShotManager : PausableObject
     {
         [Header("References")]
         [SerializeField]
@@ -33,10 +34,10 @@ namespace SpaceShooter.Actors
 
         public void Shot(InputAction.CallbackContext context)
         {
-            if (context.started)
+            if (context.started && !paused)
             {
                 shoting = true;
-            } else if (context.canceled)
+            } else if (context.canceled || paused)
             {
                 shoting = false;
             }

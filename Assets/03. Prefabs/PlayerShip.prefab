@@ -255,6 +255,9 @@ GameObject:
   - component: {fileID: 7056687228302649986}
   - component: {fileID: 7660234717757424232}
   - component: {fileID: 9104775432128744039}
+  - component: {fileID: 7929872157070507434}
+  - component: {fileID: 3515122927384129304}
+  - component: {fileID: 4471036625344411033}
   m_Layer: 6
   m_Name: PlayerShip
   m_TagString: Untagged
@@ -451,6 +454,76 @@ MonoBehaviour:
   OnBombEmitted:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7929872157070507434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056687228302649991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038b2005f3dfddb47b616e91a489b543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3515122927384129304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056687228302649991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4c3f4e9c207f1439810d58644a2746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyOnEvent: 0
+  Event: {fileID: 11400000, guid: 06248c75f7960964790adcfeabbe187c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7929872157070507434}
+        m_TargetAssemblyTypeName: SpaceShooter.Extensions.ObjectPauseManager, SpaceShooterAssembly
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4471036625344411033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056687228302649991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4c3f4e9c207f1439810d58644a2746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyOnEvent: 0
+  Event: {fileID: 11400000, guid: b82a2d41bd81ba14b9ac70e8e7e17e47, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7929872157070507434}
+        m_TargetAssemblyTypeName: SpaceShooter.Extensions.ObjectPauseManager, SpaceShooterAssembly
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8394111591082713046
 GameObject:
   m_ObjectHideFlags: 0

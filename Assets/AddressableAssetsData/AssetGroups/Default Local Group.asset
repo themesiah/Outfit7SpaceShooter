@@ -25,6 +25,22 @@ MonoBehaviour:
     m_Address: Bullets/EnemyForwardBullet
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 3c3f458a3942cb04b98fc44415918e81
+    m_Address: Obtainables/Fuel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ec76aa71f3bc12d4abbf05c0227aba84
+    m_Address: Obtainables/Powerup
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 24e850f148488a7448cdda395174e801
+    m_Address: Obtainables/Speed
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 665042d1591cdc6449370c9104765b13
+    m_Address: Obtainables/Bomb
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d60b2ce7ad746e2478e7d30483a26f17, type: 2}
   m_SchemaSet:

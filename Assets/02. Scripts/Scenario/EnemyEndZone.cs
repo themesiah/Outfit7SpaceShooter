@@ -7,7 +7,15 @@ namespace SpaceShooter.Scenario
     {
         private void OnTriggerEnter(Collider other)
         {
-            other.GetComponent<PoolObjectDestroyer>()?.Free();
+            // Not checking for tags because the physics collision matrix already manages colliding with only the necessary objects
+            PoolObjectDestroyer poolDestroyer = other.GetComponent<PoolObjectDestroyer>();
+            if (poolDestroyer != null)
+            {
+                poolDestroyer.Free();
+            } else
+            {
+                Destroy(other.gameObject);
+            }
         }
     }
 }

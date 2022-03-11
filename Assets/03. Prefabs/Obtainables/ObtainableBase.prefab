@@ -111,8 +111,10 @@ GameObject:
   - component: {fileID: 210613420707623296}
   - component: {fileID: 875421454547233604}
   - component: {fileID: 6375480241567355454}
-  - component: {fileID: 272315537532661694}
   - component: {fileID: 7712419111881707052}
+  - component: {fileID: 6622458005919098317}
+  - component: {fileID: 2813655656939126114}
+  - component: {fileID: 1508015903287120956}
   m_Layer: 12
   m_Name: ObtainableBase
   m_TagString: Untagged
@@ -128,7 +130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5683989254710015811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.54017, y: 7.795029, z: 11.836356}
+  m_LocalPosition: {x: -20.54017, y: 7, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2395842957832651164}
@@ -162,28 +164,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &272315537532661694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5683989254710015811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 401a553a978f8b140b4398a367e0f169, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onTriggerEnterEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onTriggerExitEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  tagToCheck: 
-  checkTag: 0
+  m_Radius: 2
+  m_Center: {x: 0, y: 1.1, z: 0}
 --- !u!114 &7712419111881707052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,3 +178,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ce1fe9c4bd5c54a9216140f6aabd7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6622458005919098317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683989254710015811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69606a32ab8e14468e17efc8ff4fce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed:
+    useConstant: 1
+    value: {fileID: 11400000, guid: 785b5b68691291f4faef40bec427a7e3, type: 2}
+    constantValue: 30
+    useRandom: 0
+    minMax:
+      useConstant: 1
+      value: {fileID: 0}
+      constantValue: {x: 0, y: 0}
+--- !u!114 &2813655656939126114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683989254710015811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855086364eb1ee14e8445024f8957ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 875421454547233604}
+  speed: 5
+--- !u!114 &1508015903287120956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683989254710015811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fb50c2a7057954ca9d310d92697674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnObtained:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7712419111881707052}
+        m_TargetAssemblyTypeName: GamedevsToolbox.ScriptableArchitecture.Pools.PoolObjectDestroyer,
+          GamedevsToolbox
+        m_MethodName: Free
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

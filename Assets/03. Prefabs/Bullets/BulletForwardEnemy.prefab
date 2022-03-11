@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7025485914543590230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7326886570732705990}
   m_RootOrder: 0
@@ -177,7 +177,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7707324179015285437
 MonoBehaviour:
@@ -191,7 +191,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c8f77e1bd9b994aa22d7be44ce37ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 4
+  damage:
+    useConstant: 0
+    value: {fileID: 11400000, guid: ef4f033b1a2d61140b069845ab382361, type: 2}
+    constantValue: 0
+    useRandom: 0
+    minMax:
+      useConstant: 1
+      value: {fileID: 0}
+      constantValue: {x: 0, y: 0}
   poolObjectDestroyer: {fileID: 8316902688369845206}
 --- !u!114 &1611769521472413795
 MonoBehaviour:

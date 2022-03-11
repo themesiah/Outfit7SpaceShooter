@@ -191,7 +191,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c8f77e1bd9b994aa22d7be44ce37ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage:
+    useConstant: 0
+    value: {fileID: 11400000, guid: f40088d1c894c8d4e9d2387dcf995f13, type: 2}
+    constantValue: 0
+    useRandom: 0
+    minMax:
+      useConstant: 1
+      value: {fileID: 0}
+      constantValue: {x: 0, y: 0}
   poolObjectDestroyer: {fileID: 8316902688369845206}
 --- !u!114 &1611769521472413795
 MonoBehaviour:

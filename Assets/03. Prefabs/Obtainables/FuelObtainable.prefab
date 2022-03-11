@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2038095182560719096
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 210613420707623296, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 210613420707623296, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20.54017
+      objectReference: {fileID: 0}
+    - target: {fileID: 210613420707623296, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 210613420707623296, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 210613420707623296, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 210613420707623296, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 210613420707623296, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 210613420707623296, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 210613420707623296, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 210613420707623296, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 210613420707623296, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 255007609998968834, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 7989812643485964353, guid: 8f89c85babf61134d9639967d4821624, type: 3}
+    - target: {fileID: 272315537532661694, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: onTriggerEnterEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 272315537532661694, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: onTriggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 272315537532661694, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: onTriggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 5318494211730010489}
+    - target: {fileID: 272315537532661694, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: onTriggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 272315537532661694, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: onTriggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Obtain
+      objectReference: {fileID: 0}
+    - target: {fileID: 272315537532661694, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: onTriggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: SpaceShooter.Obtainables.FuelObtainable, SpaceShooterAssembly
+      objectReference: {fileID: 0}
+    - target: {fileID: 272315537532661694, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: onTriggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2395842957832651164, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2395842957832651164, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2395842957832651164, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2671247201190115442, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: eada94e42f6e9c446afd52f5f93ca959, type: 2}
+    - target: {fileID: 5683989254710015811, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+      propertyPath: m_Name
+      value: FuelObtainable
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+--- !u!1 &5956383076766959547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5683989254710015811, guid: 9fb263621147b484e986e0b73c746472, type: 3}
+  m_PrefabInstance: {fileID: 2038095182560719096}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5318494211730010489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5956383076766959547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f7ffdde3fb79e4ca3213e30b3ab7d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelReference:
+    useConstant: 0
+    value: {fileID: 11400000, guid: 2cc8fa034c762d74ba65f46f18f2aa83, type: 2}
+    constantValue: 0
+    useRandom: 0
+    minMax:
+      useConstant: 1
+      value: {fileID: 0}
+      constantValue: {x: 0, y: 0}
+  fuelObtain: 30

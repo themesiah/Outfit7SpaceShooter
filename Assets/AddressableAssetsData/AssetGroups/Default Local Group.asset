@@ -45,6 +45,22 @@ MonoBehaviour:
     m_Address: Bullets/Bomb
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 48c5c0ad11c75da46b4e80e85953d5f3
+    m_Address: Assets/82. Pools/EnemyBulletPool.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9fc0d4010bbf28b4594072e72b8655ab
+    m_Address: Assets/01. Scenes/GameScene.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b5498fc492a5885488d63d6744e4733b
+    m_Address: Assets/01. Scenes/StressTestScene.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b7242cd6d1f42d44b8e50ec334fd431e
+    m_Address: Assets/01. Scenes/MainMenu.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d60b2ce7ad746e2478e7d30483a26f17, type: 2}
   m_SchemaSet:

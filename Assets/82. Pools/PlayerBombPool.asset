@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0ea2e09a7af7e42a694c263e0ab0df, type: 3}
   m_Name: PlayerBombPool
   m_EditorClassIdentifier: 
-  prefabToInstantiate: {fileID: 0}
+  prefabToInstantiate: {fileID: 7145045088935838062, guid: d2f73e8f5e1058a429b5a0605a46d697, type: 3}
   referenceToInstantiate:
     m_AssetGUID: d2f73e8f5e1058a429b5a0605a46d697
     m_SubObjectName: 

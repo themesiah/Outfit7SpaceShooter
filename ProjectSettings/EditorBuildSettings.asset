@@ -5,12 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/01. Scenes/MainMenu.unity
     guid: b7242cd6d1f42d44b8e50ec334fd431e
-  - enabled: 1
+  - enabled: 0
     path: Assets/01. Scenes/GameScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/01. Scenes/StressTestScene.unity
+    guid: b5498fc492a5885488d63d6744e4733b
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 011d9bd2f7c98cb4f8d271a24c643766, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 65322679be4c4ed4990333bec2c75a5e, type: 2}

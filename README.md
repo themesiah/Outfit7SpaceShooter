@@ -32,8 +32,8 @@ of what have you done and main challenges you had at development of the game.
 11. Fuel item, powerup item, speed item, bomb item :white_check_mark:
 12. Bomb (big bullet, needs currency) :white_check_mark:
 13. Main menu and pause menu :white_check_mark:
-14. Player death with game loop :x:
-15. Enemy movement :x:
+14. Player death with game loop :white_check_mark:
+15. Enemy movement :white_check_mark:
 16. Enemy spawn :x:
 17. Enemy formations (group spawning) :x:
 18. High scores :x:

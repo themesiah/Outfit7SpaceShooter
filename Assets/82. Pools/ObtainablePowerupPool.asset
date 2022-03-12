@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0ea2e09a7af7e42a694c263e0ab0df, type: 3}
   m_Name: ObtainablePowerupPool
   m_EditorClassIdentifier: 
-  prefabToInstantiate: {fileID: 0}
+  prefabToInstantiate: {fileID: 4522232417507827267, guid: ec76aa71f3bc12d4abbf05c0227aba84, type: 3}
   referenceToInstantiate:
     m_AssetGUID: ec76aa71f3bc12d4abbf05c0227aba84
     m_SubObjectName: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0ea2e09a7af7e42a694c263e0ab0df, type: 3}
   m_Name: PlayerBulletPool
   m_EditorClassIdentifier: 
-  prefabToInstantiate: {fileID: 0}
+  prefabToInstantiate: {fileID: 7145045088935838062, guid: 3a009811d1ef0ab4e9ea7b5d521e76d1, type: 3}
   referenceToInstantiate:
     m_AssetGUID: 3a009811d1ef0ab4e9ea7b5d521e76d1
     m_SubObjectName: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0ea2e09a7af7e42a694c263e0ab0df, type: 3}
   m_Name: ObtainableFuelPool
   m_EditorClassIdentifier: 
-  prefabToInstantiate: {fileID: 0}
+  prefabToInstantiate: {fileID: 5956383076766959547, guid: 3c3f458a3942cb04b98fc44415918e81, type: 3}
   referenceToInstantiate:
     m_AssetGUID: 3c3f458a3942cb04b98fc44415918e81
     m_SubObjectName: 

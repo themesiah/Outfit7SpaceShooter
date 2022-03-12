@@ -201,6 +201,9 @@ MonoBehaviour:
       value: {fileID: 0}
       constantValue: {x: 0, y: 0}
   poolObjectDestroyer: {fileID: 8316902688369845206}
+  OnCollided:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1611769521472413795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,7 +245,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  delay: 2
+  delay: 10
 --- !u!114 &8316902688369845206
 MonoBehaviour:
   m_ObjectHideFlags: 0

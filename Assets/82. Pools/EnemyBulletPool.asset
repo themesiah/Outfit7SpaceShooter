@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0ea2e09a7af7e42a694c263e0ab0df, type: 3}
   m_Name: EnemyBulletPool
   m_EditorClassIdentifier: 
-  prefabToInstantiate: {fileID: 0}
+  prefabToInstantiate: {fileID: 7145045088935838062, guid: e239d1058d5c176498ba27f417ab12a6, type: 3}
   referenceToInstantiate:
     m_AssetGUID: e239d1058d5c176498ba27f417ab12a6
     m_SubObjectName: 
@@ -21,7 +21,7 @@ MonoBehaviour:
   numberOfInstances:
     useConstant: 1
     value: {fileID: 0}
-    constantValue: 200
+    constantValue: 2000
     useRandom: 0
     minMax:
       useConstant: 1

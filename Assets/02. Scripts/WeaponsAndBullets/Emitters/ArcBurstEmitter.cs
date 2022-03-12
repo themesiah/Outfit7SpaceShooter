@@ -1,6 +1,7 @@
 using UnityEngine;
 using SpaceShooter.Extensions;
 using System.Collections;
+using GamedevsToolbox.ScriptableArchitecture.Sets;
 
 namespace SpaceShooter.WeaponsAndBullets
 {
@@ -14,8 +15,18 @@ namespace SpaceShooter.WeaponsAndBullets
         private Transform spawnPoint = default;
         [SerializeField]
         private RuntimeSingleBulletPoolContainer bulletContainerReference = default;
+        [SerializeField]
+        private RuntimeSingleTransform playerTransformReference = default;
 
         [Header("Arc configuration")]
+        [SerializeField]
+        [Tooltip("Time before the bursts start. Useful for desynchronizing multiple ArcBurstEmitter emitting at the same time")]
+        private float startDelay = 0f;
+
+        [SerializeField]
+        [Tooltip("Sets if the center of the arc is aimed to the player")]
+        private bool facePlayer = false;
+
         [SerializeField]
         [Tooltip("Number of times the same pattern will be shot")]
         private int numberOfBursts = 1;
@@ -41,22 +52,21 @@ namespace SpaceShooter.WeaponsAndBullets
         [Range(0f, 360f)]
         private float arcAngle = 45f;
 
+        [SerializeField]
+        [Tooltip("The resulting will have this number added. Useful for using multiple arc burst emitters and doing nice patterns")]
+        private float angleOffset = 0f;
+
         private float angleStart;
         private float angleStep;
         private Vector3 tempEuler;
         private Coroutine emisionCoroutine = null;
-
-        private void Awake()
-        {
-            PrecalculateArcAngles();
-        }
 
         private void PrecalculateArcAngles()
         {
             tempEuler = spawnPoint.rotation.eulerAngles;
 
             angleStart = tempEuler.z - arcAngle / 2f;
-            angleStep = arcAngle / (arcRows - 1);
+            angleStep = arcRows == 1 ? 0f : (arcAngle / (arcRows - 1));
         }
 
         // We use a coroutine to make use of WaitForSeconds, to use multiple bursts
@@ -69,6 +79,17 @@ namespace SpaceShooter.WeaponsAndBullets
 
         private IEnumerator EmitCoroutine()
         {
+            PrecalculateArcAngles();
+            yield return new WaitForSeconds(startDelay);
+            float angle = 0f;
+            if (facePlayer && playerTransformReference.Get() != null)
+            {
+                Vector3 direction = playerTransformReference.Get().position - spawnPoint.position;
+                angle = Vector3.Angle(spawnPoint.right, direction);
+                if (spawnPoint.position.y > playerTransformReference.Get().position.y)
+                    angle *= -1f;
+            }
+
             for (int w = 0; w < numberOfBursts; ++w)
             {
                 for (int i = 0; i < bulletsPerStack; ++i)
@@ -77,11 +98,26 @@ namespace SpaceShooter.WeaponsAndBullets
                     {
                         // We calculate the angle of this row and get the bullet from the pool facing that direction
                         tempEuler.z = angleStart + j * angleStep;
+
+                        if (facePlayer && playerTransformReference.Get() != null)
+                        {
+                            Debug.Log(angle);
+                            tempEuler.z += angle;
+                        }
+
+                        tempEuler.z += angleOffset;
+
                         Quaternion quat = Quaternion.Euler(tempEuler);
                         GameObject go = bulletContainerReference.Get().pool.GetInstance(null, spawnPoint.position, quat);
                         // We set a new speed for the bullet to make stacks (depends on it position on the stack) and initialize its movement
                         IBulletMovement bulletForward = go.GetComponent<IBulletMovement>();
-                        bulletForward?.SetSpeed(Mathf.Lerp(minMaxStackSpeed.x, minMaxStackSpeed.y, (float)((float)i / (float)bulletsPerStack)));
+                        if (bulletsPerStack > 1)
+                        {
+                            bulletForward?.SetSpeed(Mathf.Lerp(minMaxStackSpeed.x, minMaxStackSpeed.y, (float)((float)i / (float)bulletsPerStack)));
+                        } else
+                        {
+                            bulletForward?.SetSpeed(minMaxStackSpeed.y);
+                        }
                         bulletForward?.StartMovement();
                     }
                 }

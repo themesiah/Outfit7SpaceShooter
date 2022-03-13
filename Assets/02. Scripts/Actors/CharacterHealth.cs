@@ -14,9 +14,16 @@ namespace SpaceShooter.Actors
         [SerializeField]
         private UnityEvent<int> OnHealed = default;
 
+        private bool alreadyDied = false;
+
         public void Die()
         {
-            OnDie?.Invoke();
+            // We want to control the case in which a enemy is hit by two bullets at the same time and dies from both. It should only die once
+            if (!alreadyDied)
+            {
+                alreadyDied = true;
+                OnDie?.Invoke();
+            }
         }
 
         public virtual void Heal(int heal)
@@ -27,6 +34,11 @@ namespace SpaceShooter.Actors
         public virtual void TakeDamage(int damage)
         {
             OnReceiveDamage?.Invoke(damage);
+        }
+
+        public virtual void Reset()
+        {
+            alreadyDied = false;
         }
     }
 }

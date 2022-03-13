@@ -1,7 +1,7 @@
 using SpaceShooter.Actors;
 using UnityEngine;
 
-namespace SpaceShooter.Utils
+namespace SpaceShooter.WeaponsAndBullets
 {
     public class BombExplosion : MonoBehaviour
     {

@@ -21,7 +21,6 @@ namespace SpaceShooter.WeaponsAndBullets
         private void OnTriggerEnter(Collider other)
         {
             // Not checking for tags because the physics collision matrix already manages colliding with only the necessary objects
-            SimpleLogger.Instance.Log(SimpleLogger.LogContext.Battle, "Collision of bullet {0} with entity {1}", gameObject.name, other.name);
             IDamageable damageable = other.GetComponent<IDamageable>();
             damageable?.TakeDamage(damage.GetValue());
             poolObjectDestroyer.Free();

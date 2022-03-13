@@ -4,7 +4,7 @@ using SpaceShooter.WeaponsAndBullets;
 
 namespace SpaceShooter.Extensions
 {
-    public class RuntimeSingleBulletPoolContainerAssigner : RuntimeSingleAssigner<RuntimeSingleBulletPoolContainer, BulletPoolContainer>
+    public class RuntimeSingleBulletPoolContainerAssigner : RuntimeSingleAssigner<RuntimeSingleBulletPoolContainer, PoolContainer>
     {
     }
 }

@@ -61,6 +61,26 @@ MonoBehaviour:
     m_Address: Assets/01. Scenes/MainMenu.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 81d6bfeeb4148c741832d519aa4a1c9c
+    m_Address: Assets/03. Prefabs/Enemies/EnemyBig1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cac7ad36537f2dc46815e7cd822a6f93
+    m_Address: Assets/03. Prefabs/Enemies/EnemyBig2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7198a37c75a9d7649800222b57d3fffe
+    m_Address: Assets/03. Prefabs/Enemies/EnemyMedium1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 748327a26115a0a43b97e53bb0710946
+    m_Address: Assets/03. Prefabs/Enemies/EnemySmall1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1bee650d3e42a5c499a7fa52dd4e7eb8
+    m_Address: Assets/03. Prefabs/Enemies/Obstacle1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d60b2ce7ad746e2478e7d30483a26f17, type: 2}
   m_SchemaSet:

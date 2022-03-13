@@ -34,10 +34,10 @@ of what have you done and main challenges you had at development of the game.
 13. Main menu and pause menu :white_check_mark:
 14. Player death with game loop :white_check_mark:
 15. Enemy movement :white_check_mark:
-16. Enemy spawn :x:
-17. Enemy formations (group spawning) :x:
+16. Enemy spawn :white_check_mark:
+17. Enemy formations (group spawning) :white_check_mark:
 18. High scores :x:
-19. Explosive obstacles :x:
+19. Spawn powerups :x:
 20. Destroyable enemy bullets :x:
 21. Raise difficulty over time :x:
 22. Evasive enemy (high health, moves evading your forward, big threat) :x:

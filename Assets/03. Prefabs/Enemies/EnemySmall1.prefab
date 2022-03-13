@@ -77,11 +77,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1881889348606626333, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1881889348606626333, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 300
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 2143729544065346454, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
+      propertyPath: points
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 2836507839653488380, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: m_Name
@@ -195,7 +199,7 @@ MonoBehaviour:
   numberOfBursts: 3
   timeBetweenBursts: 0.5
   bulletsPerStack: 3
-  minMaxStackSpeed: {x: 0, y: 40}
+  minMaxStackSpeed: {x: 30, y: 40}
   arcRows: 1
   arcAngle: 0
   angleOffset: 0

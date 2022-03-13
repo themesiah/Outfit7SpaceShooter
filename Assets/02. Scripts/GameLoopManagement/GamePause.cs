@@ -26,13 +26,13 @@ namespace SpaceShooter.Management
         {
             if (currentlyPaused)
             {
-                SimpleLogger.Instance.Log(SimpleLogger.LogContext.UI, "Game resumed");
+                Debug.Log("Game resumed");
                 resumeEvent?.Raise();
                 Time.timeScale = 1f;
             }
             else
             {
-                SimpleLogger.Instance.Log(SimpleLogger.LogContext.UI, "Game paused");
+                Debug.Log("Game paused");
                 pauseEvent?.Raise();
                 Time.timeScale = 0f;
             }

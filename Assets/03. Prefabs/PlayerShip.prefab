@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6810670235136198581}
-  bulletContainer: {fileID: 4595091692542162878}
+  bulletContainer: {fileID: 6013562358880937486}
 --- !u!1 &5705568628189513329
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 103464346138194115}
-  bulletContainer: {fileID: 4595091692542162878}
+  bulletContainer: {fileID: 6013562358880937486}
 --- !u!1 &7056687228302649991
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2972747310916177239}
   - component: {fileID: 5282347251814161350}
-  - component: {fileID: 525012980104552333}
+  - component: {fileID: 2057025891511300679}
   m_Layer: 6
   m_Name: BombEmitter
   m_TagString: Untagged
@@ -609,8 +609,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 2972747310916177239}
-  bulletContainer: {fileID: 525012980104552333}
---- !u!114 &525012980104552333
+  bulletContainer: {fileID: 2057025891511300679}
+--- !u!114 &2057025891511300679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -619,7 +619,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8394111591082713046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbed5888eb502f54cbdf31c6ce66f3ee, type: 3}
+  m_Script: {fileID: 11500000, guid: efec6cf8c03ac07468ba5eb7e752a538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pool:
@@ -633,7 +633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3370716740585724672}
-  - component: {fileID: 4595091692542162878}
+  - component: {fileID: 6013562358880937486}
   m_Layer: 6
   m_Name: ShotEmitters
   m_TagString: Untagged
@@ -657,7 +657,7 @@ Transform:
   m_Father: {fileID: 7056687228302649988}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4595091692542162878
+--- !u!114 &6013562358880937486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -666,7 +666,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8764100715924223942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbed5888eb502f54cbdf31c6ce66f3ee, type: 3}
+  m_Script: {fileID: 11500000, guid: efec6cf8c03ac07468ba5eb7e752a538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pool:

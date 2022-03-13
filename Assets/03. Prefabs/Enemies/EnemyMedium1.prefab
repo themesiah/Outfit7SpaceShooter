@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 516386892277468134, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
+      propertyPath: burstDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 516386892277468134, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: emitters.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -68,8 +72,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1881889348606626333, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
+      propertyPath: maxHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881889348606626333, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 200
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2143729544065346454, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
+      propertyPath: points
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2836507839653488380, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: m_Name
@@ -168,7 +180,7 @@ MonoBehaviour:
   numberOfBursts: 1
   timeBetweenBursts: 0.3
   bulletsPerStack: 1
-  minMaxStackSpeed: {x: 30, y: 50}
+  minMaxStackSpeed: {x: 30, y: 30}
   arcRows: 1
   arcAngle: 0
   angleOffset: 0

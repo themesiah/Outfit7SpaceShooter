@@ -26,8 +26,6 @@ namespace SpaceShooter.UI
 
         private void OnFuelChanged(float fuel)
         {
-            if (SimpleLogger.Instance)
-            SimpleLogger.Instance.Log(SimpleLogger.LogContext.UI, "Fuel changed: {0}", fuel);
             fuelSlider.value = fuel / maxFuelRef.GetValue();
         }
     }

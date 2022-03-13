@@ -7,7 +7,7 @@ namespace SpaceShooter.WeaponsAndBullets
         [SerializeField]
         private Transform spawnPoint = default;
         [SerializeField]
-        private BulletPoolContainer bulletContainer = default;
+        private PoolContainer bulletContainer = default;
 
         public override void Emit()
         {

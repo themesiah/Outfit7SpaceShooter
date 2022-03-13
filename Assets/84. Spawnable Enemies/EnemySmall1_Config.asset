@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f26cf8d513109b741ad4e047380d4976, type: 3}
+  m_Name: EnemySmall1_Config
+  m_EditorClassIdentifier: 
+  spawnableName: Small1
+  spawnWeight: 5
+  points: 400
+  poolReference: {fileID: 11400000, guid: 85fd323d2b95b284aab53b8dea2bdcb1, type: 2}
+  spawnConfigurations:
+  - rows: 1
+    columns: 1
+    xSeparation: 0
+    ySeparation: 0

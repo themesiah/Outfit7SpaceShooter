@@ -6,6 +6,9 @@ namespace GamedevsToolbox.ScriptableArchitecture.Pools
     {
         private ScriptablePool pool;
 
+        public delegate void OnFreedHandler();
+        public event OnFreedHandler OnFreed;
+
         public void InitWithPool(ScriptablePool pool)
         {
             this.pool = pool;
@@ -23,6 +26,8 @@ namespace GamedevsToolbox.ScriptableArchitecture.Pools
                 {
                     Destroy(gameObject);
                 }
+                OnFreed?.Invoke();
+                OnFreed = null;
             }
         }
     }

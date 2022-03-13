@@ -64,12 +64,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1881889348606626333, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
+      propertyPath: maxHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881889348606626333, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
       value: 2000
       objectReference: {fileID: 0}
+    - target: {fileID: 2143729544065346454, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
+      propertyPath: points
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 2836507839653488380, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: m_Name
-      value: EnemyBig
+      value: EnemyBig1
       objectReference: {fileID: 0}
     - target: {fileID: 3971438068463265479, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: OnVisible.m_PersistentCalls.m_Calls.Array.size
@@ -147,6 +155,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 2945093134685685933}
   bulletContainerReference: {fileID: 11400000, guid: a6e771eb0d685334189bcb6afecbea14, type: 2}
   playerTransformReference: {fileID: 0}
+  startDelay: 0
   facePlayer: 0
   numberOfBursts: 3
   timeBetweenBursts: 0.3
@@ -154,6 +163,7 @@ MonoBehaviour:
   minMaxStackSpeed: {x: 30, y: 50}
   arcRows: 3
   arcAngle: 45
+  angleOffset: 0
 --- !u!114 &6352866662754252332
 MonoBehaviour:
   m_ObjectHideFlags: 0

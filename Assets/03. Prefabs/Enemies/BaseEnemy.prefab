@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 573438458298334671}
   - component: {fileID: 1881889348606626333}
+  - component: {fileID: 2143729544065346454}
   - component: {fileID: 9154489570195331305}
   - component: {fileID: 569890126750044175}
   - component: {fileID: 4657487754827449205}
@@ -96,11 +97,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 734b9b8908ff16842ab733085cb5ea54, type: 2}
-        m_TargetAssemblyTypeName: GamedevsToolbox.ScriptableArchitecture.Events.TemplatedGameEvent`1[[System.Int32,
-          mscorlib
-        m_MethodName: Raise
-        m_Mode: 3
+      - m_Target: {fileID: 2143729544065346454}
+        m_TargetAssemblyTypeName: SpaceShooter.Actors.EnemyPointsObtainer, SpaceShooterAssembly
+        m_MethodName: GetPoints
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -129,6 +129,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   maxHealth: 100
+--- !u!114 &2143729544065346454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2836507839653488380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ac48e3585967147af3641d2d5e44fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addScoreEvent: {fileID: 11400000, guid: 734b9b8908ff16842ab733085cb5ea54, type: 2}
+  points: 0
 --- !u!54 &9154489570195331305
 Rigidbody:
   m_ObjectHideFlags: 0

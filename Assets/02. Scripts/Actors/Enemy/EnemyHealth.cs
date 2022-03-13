@@ -26,5 +26,11 @@ namespace SpaceShooter.Actors
                 Die();
             }
         }
+
+        public override void Reset()
+        {
+            base.Reset();
+            health = maxHealth;
+        }
     }
 }

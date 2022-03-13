@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0ea2e09a7af7e42a694c263e0ab0df, type: 3}
+  m_Name: Enemy_Obstacle1
+  m_EditorClassIdentifier: 
+  prefabToInstantiate: {fileID: 2860490818543895939, guid: 1bee650d3e42a5c499a7fa52dd4e7eb8, type: 3}
+  referenceToInstantiate:
+    m_AssetGUID: 1bee650d3e42a5c499a7fa52dd4e7eb8
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  numberOfInstances:
+    useConstant: 1
+    value: {fileID: 0}
+    constantValue: 30
+    useRandom: 0
+    minMax:
+      useConstant: 1
+      value: {fileID: 0}
+      constantValue: {x: 0, y: 0}
+  instancesFullBehaviour: 1
+  dynamicMaxInstances:
+    useConstant: 1
+    value: {fileID: 0}
+    constantValue: 0
+    useRandom: 0
+    minMax:
+      useConstant: 1
+      value: {fileID: 0}
+      constantValue: {x: 0, y: 0}
+  dynamicInstancePace:
+    useConstant: 1
+    value: {fileID: 0}
+    constantValue: 0
+    useRandom: 0
+    minMax:
+      useConstant: 1
+      value: {fileID: 0}
+      constantValue: {x: 0, y: 0}

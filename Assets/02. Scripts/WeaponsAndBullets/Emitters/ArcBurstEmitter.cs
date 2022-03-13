@@ -81,13 +81,13 @@ namespace SpaceShooter.WeaponsAndBullets
         {
             PrecalculateArcAngles();
             yield return new WaitForSeconds(startDelay);
-            float angle = 0f;
+            float playerFacingAngle = 0f;
             if (facePlayer && playerTransformReference.Get() != null)
             {
                 Vector3 direction = playerTransformReference.Get().position - spawnPoint.position;
-                angle = Vector3.Angle(spawnPoint.right, direction);
+                playerFacingAngle = Vector3.Angle(spawnPoint.right, direction);
                 if (spawnPoint.position.y > playerTransformReference.Get().position.y)
-                    angle *= -1f;
+                    playerFacingAngle *= -1f;
             }
 
             for (int w = 0; w < numberOfBursts; ++w)
@@ -96,34 +96,45 @@ namespace SpaceShooter.WeaponsAndBullets
                 {
                     for (int j = 0; j < arcRows; ++j)
                     {
-                        // We calculate the angle of this row and get the bullet from the pool facing that direction
-                        tempEuler.z = angleStart + j * angleStep;
-
-                        if (facePlayer && playerTransformReference.Get() != null)
-                        {
-                            Debug.Log(angle);
-                            tempEuler.z += angle;
-                        }
-
-                        tempEuler.z += angleOffset;
-
-                        Quaternion quat = Quaternion.Euler(tempEuler);
-                        GameObject go = bulletContainerReference.Get().pool.GetInstance(null, spawnPoint.position, quat);
-                        // We set a new speed for the bullet to make stacks (depends on it position on the stack) and initialize its movement
-                        IBulletMovement bulletForward = go.GetComponent<IBulletMovement>();
-                        if (bulletsPerStack > 1)
-                        {
-                            bulletForward?.SetSpeed(Mathf.Lerp(minMaxStackSpeed.x, minMaxStackSpeed.y, (float)((float)i / (float)bulletsPerStack)));
-                        } else
-                        {
-                            bulletForward?.SetSpeed(minMaxStackSpeed.y);
-                        }
-                        bulletForward?.StartMovement();
+                        Quaternion quat = GetAngle(playerFacingAngle, j);
+                        GenerateBullet(i, quat);
                     }
                 }
                 // Wait for next burst
                 yield return new WaitForSeconds(timeBetweenBursts);
             }
+        }
+
+        private void GenerateBullet(int i, Quaternion quat)
+        {
+            GameObject go = bulletContainerReference.Get().pool.GetInstance(null, spawnPoint.position, quat);
+            // We set a new speed for the bullet to make stacks (depends on it position on the stack) and initialize its movement
+            IBulletMovement bulletForward = go.GetComponent<IBulletMovement>();
+            if (bulletsPerStack > 1)
+            {
+                bulletForward?.SetSpeed(Mathf.Lerp(minMaxStackSpeed.x, minMaxStackSpeed.y, (float)((float)i / (float)bulletsPerStack)));
+            }
+            else
+            {
+                bulletForward?.SetSpeed(minMaxStackSpeed.y);
+            }
+            bulletForward?.StartMovement();
+        }
+
+        private Quaternion GetAngle(float playerFacingAngle, int j)
+        {
+            // We calculate the angle of this row and get the bullet from the pool facing that direction
+            tempEuler.z = angleStart + j * angleStep;
+
+            if (facePlayer && playerTransformReference.Get() != null)
+            {
+                tempEuler.z += playerFacingAngle;
+            }
+
+            tempEuler.z += angleOffset;
+
+            Quaternion quat = Quaternion.Euler(tempEuler);
+            return quat;
         }
     }
 }

@@ -24,9 +24,6 @@ namespace SpaceShooter.Management
         private EnemySpawner enemySpawner = default;
 
         [SerializeField]
-        private EnemySpawnerRandomPosition randomPositionProvider = default;
-
-        [SerializeField]
         private ScriptableIntReference currentWaveReference = default;
 
         [Header("Configuration")]

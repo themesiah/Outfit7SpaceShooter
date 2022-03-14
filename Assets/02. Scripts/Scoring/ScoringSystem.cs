@@ -1,7 +1,7 @@
 using UnityEngine;
 using GamedevsToolbox.ScriptableArchitecture.Values;
 
-namespace SpaceShooter.Data
+namespace SpaceShooter.Scoring
 {
     public class ScoringSystem : MonoBehaviour
     {

@@ -20,7 +20,7 @@ namespace SpaceShooter.Actors
 
         private float ExtraSpeed => (waveReference.GetValue()-1) * extraSpeedPerWave;
 
-        public void Start()
+        public void OnEnable()
         {
             SetVelocity();
         }

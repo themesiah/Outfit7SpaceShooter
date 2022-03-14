@@ -83,9 +83,9 @@ namespace GamedevsToolbox.ScriptableArchitecture.Pools
 
             if (instance != null)
             {
-                instance.transform.SetParent(instanceParent);
                 instance.transform.position = instancePosition;
                 instance.transform.rotation = instanceRotation;
+                instance.transform.SetParent(instanceParent);
             }
             return instance;
         }

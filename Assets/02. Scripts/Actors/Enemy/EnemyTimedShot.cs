@@ -13,16 +13,28 @@ namespace SpaceShooter.Actors
 
         float timer = 0f;
 
+        private void OnDisable()
+        {
+            timer = 0f;
+        }
+
         private void Update()
         {
+            if (burstDelay <= 0f)
+                return;
             timer += Time.deltaTime;
             if (timer >= burstDelay)
             {
                 timer = 0f;
-                foreach(var emitter in emitters)
-                {
-                    emitter.Emit();
-                }
+                Emit();
+            }
+        }
+
+        public void Emit()
+        {
+            foreach (var emitter in emitters)
+            {
+                emitter.Emit();
             }
         }
     }

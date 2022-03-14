@@ -85,6 +85,10 @@ MonoBehaviour:
     m_Address: Bullets/DestroyableBulletEnemy
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 070829b08f85ffc4c93330aab7139525
+    m_Address: Assets/03. Prefabs/Enemies/EnemyMedium2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d60b2ce7ad746e2478e7d30483a26f17, type: 2}
   m_SchemaSet:

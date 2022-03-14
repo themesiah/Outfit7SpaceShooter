@@ -40,7 +40,7 @@ of what have you done and main challenges you had at development of the game.
 19. Spawn powerups :white_check_mark:
 20. Destroyable enemy bullets :white_check_mark:
 21. Raise difficulty over time :white_check_mark:
-22. Evasive enemy (high health, moves evading your forward, big threat) :x:
+22. Evasive enemy (high health, moves evading your forward, big threat) :white_check_mark:
 23. Visual feedback (explosion on deaths, mini-explosion on bullet hit, bomb explosion) :x:
 24. SFX :x:
 25. BGM :x:

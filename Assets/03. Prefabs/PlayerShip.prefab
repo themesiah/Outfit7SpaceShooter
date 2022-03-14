@@ -346,7 +346,7 @@ MonoBehaviour:
       value: {fileID: 0}
       constantValue: {x: 0, y: 0}
   acceleratedSpeedMultiplier: 2
-  accelerationFuelConsumptionRate: 1
+  accelerationFuelConsumptionRate: 0.5
   maxTurningAngle: 30
   turningSpeed: 150
 --- !u!114 &7056687228302649986
@@ -450,7 +450,7 @@ MonoBehaviour:
   emitters:
   - {fileID: 3834238101574281408}
   - {fileID: 2563696241072353572}
-  shotFuelConsumptionPerShot: 0.1
+  shotFuelConsumptionPerShot: 0.05
   shotDelay: 0.1
   OnShotsEmitted:
     m_PersistentCalls:

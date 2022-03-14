@@ -1,4 +1,5 @@
 using GamedevsToolbox.ScriptableArchitecture.Sets;
+using GamedevsToolbox.ScriptableArchitecture.Values;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,6 +15,8 @@ namespace SpaceShooter.Actors
         private Rigidbody enemyBody = default;
         [SerializeField]
         private RuntimeSingleTransform stopPointReference = default;
+        [SerializeField]
+        private ScriptableIntReference waveReference = default;
         [Header("Configuration")]
         [SerializeField]
         private float movementSpeed = 10f;
@@ -21,20 +24,32 @@ namespace SpaceShooter.Actors
         private float movementSpeedAfterStop = 10f;
         [SerializeField]
         private float timeStopped = 5f;
+        [SerializeField]
+        private float extraSpeedPerWave = 0f;
         [Header("Events")]
         [SerializeField]
         private UnityEvent OnStopped = default;
         [SerializeField]
         private UnityEvent OnResumed = default;
 
-        private void Start()
+        private Coroutine movementCoroutine;
+
+        private float ExtraSpeed => (waveReference.GetValue()-1) * extraSpeedPerWave;
+
+        private void OnEnable()
         {
-            StartCoroutine(Movement());
+            movementCoroutine = StartCoroutine(Movement());
+        }
+
+        private void OnDisable()
+        {
+            StopCoroutine(movementCoroutine);
         }
 
         private IEnumerator Movement()
         {
-            enemyBody.velocity = transform.right * movementSpeed;
+            yield return null;
+            enemyBody.velocity = (movementSpeed + ExtraSpeed) * transform.right;
             float distance = Mathf.Abs(stopPointReference.Get().position.x - transform.position.x);
             // Wait until we are near the stop point
             while (distance > STOP_THRESHOLD)
@@ -49,7 +64,7 @@ namespace SpaceShooter.Actors
             yield return new WaitForSeconds(timeStopped);
             OnResumed?.Invoke();
             // Resume movement with different speed (faster exit?)
-            enemyBody.velocity = transform.right * movementSpeedAfterStop;
+            enemyBody.velocity = (movementSpeedAfterStop + ExtraSpeed) * transform.right;
         }
     }
 }

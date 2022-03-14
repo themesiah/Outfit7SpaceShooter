@@ -20,7 +20,7 @@ namespace SpaceShooter.Obtainables
 
         private void Update()
         {
-            currentRotation += rotationDirection * rotationSpeed.GetValue() * Time.deltaTime;
+            currentRotation += rotationSpeed.GetValue() * Time.deltaTime * rotationDirection;
             transform.localEulerAngles = currentRotation;
         }
     }

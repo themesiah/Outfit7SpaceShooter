@@ -46,39 +46,43 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 48c5c0ad11c75da46b4e80e85953d5f3
-    m_Address: Assets/82. Pools/EnemyBulletPool.asset
+    m_Address: Pools/EnemyBulletPool
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 9fc0d4010bbf28b4594072e72b8655ab
-    m_Address: Assets/01. Scenes/GameScene.unity
+    m_Address: Scenes/GameScene
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b5498fc492a5885488d63d6744e4733b
-    m_Address: Assets/01. Scenes/StressTestScene.unity
+    m_Address: Scenes/StressTestScene
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b7242cd6d1f42d44b8e50ec334fd431e
-    m_Address: Assets/01. Scenes/MainMenu.unity
+    m_Address: Scenes/MainMenu
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 81d6bfeeb4148c741832d519aa4a1c9c
-    m_Address: Assets/03. Prefabs/Enemies/EnemyBig1.prefab
+    m_Address: Enemies/EnemyBig1
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: cac7ad36537f2dc46815e7cd822a6f93
-    m_Address: Assets/03. Prefabs/Enemies/EnemyBig2.prefab
+    m_Address: Enemies/EnemyBig2
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 7198a37c75a9d7649800222b57d3fffe
-    m_Address: Assets/03. Prefabs/Enemies/EnemyMedium1.prefab
+    m_Address: Enemies/EnemyMedium1
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 748327a26115a0a43b97e53bb0710946
-    m_Address: Assets/03. Prefabs/Enemies/EnemySmall1.prefab
+    m_Address: Enemies/EnemySmall1
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 1bee650d3e42a5c499a7fa52dd4e7eb8
-    m_Address: Assets/03. Prefabs/Enemies/Obstacle1.prefab
+    m_Address: Enemies/Obstacle1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0b1d9c666a85cd24cb8772a74fb091ab
+    m_Address: Bullets/DestroyableBulletEnemy
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

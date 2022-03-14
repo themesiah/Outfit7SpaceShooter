@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1983112459485244763}
   - component: {fileID: 6484707980140461308}
   - component: {fileID: 2948099109120397781}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa7c9ebc57bc9164ea22aa818180bd8f, type: 2}
+  - {fileID: 2100000, guid: 01bd7ff454f635f47b8ba65235c5e44f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -128,8 +128,8 @@ GameObject:
   - component: {fileID: 1611769521472413795}
   - component: {fileID: 127340640592860145}
   - component: {fileID: 8316902688369845206}
-  m_Layer: 10
-  m_Name: BulletForwardEnemy
+  m_Layer: 11
+  m_Name: DestroyableBulletEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
   damageReference:
     useConstant: 0
     value: {fileID: 11400000, guid: ef4f033b1a2d61140b069845ab382361, type: 2}
-    constantValue: 4
+    constantValue: 0
     useRandom: 0
     minMax:
       useConstant: 1

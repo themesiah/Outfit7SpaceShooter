@@ -69,7 +69,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1881889348606626333, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: maxHealth
-      value: 300
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881889348606626333, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
+      propertyPath: extraHealthPerWave
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2143729544065346454, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: points

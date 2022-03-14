@@ -150,6 +150,10 @@ PrefabInstance:
       propertyPath: minMaxStackSpeed.x
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 5245076815147612178, guid: 81d6bfeeb4148c741832d519aa4a1c9c, type: 3}
+      propertyPath: bulletContainerReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f8333d2313d691545bdfa426e6fec373, type: 2}
     - target: {fileID: 6868375468276749897, guid: 81d6bfeeb4148c741832d519aa4a1c9c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

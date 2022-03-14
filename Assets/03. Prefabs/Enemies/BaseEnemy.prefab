@@ -128,7 +128,17 @@ MonoBehaviour:
   OnHealed:
     m_PersistentCalls:
       m_Calls: []
+  waveReference:
+    useConstant: 0
+    value: {fileID: 11400000, guid: f88a013b071f6be47bcb9a6b917651f2, type: 2}
+    constantValue: 0
+    useRandom: 0
+    minMax:
+      useConstant: 1
+      value: {fileID: 0}
+      constantValue: {x: 0, y: 0}
   maxHealth: 100
+  extraHealthPerWave: 20
 --- !u!114 &2143729544065346454
 MonoBehaviour:
   m_ObjectHideFlags: 0

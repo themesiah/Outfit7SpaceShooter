@@ -1,11 +1,16 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace GamedevsToolbox.ScriptableArchitecture.Pools
 {
     public class PoolObjectDestroyer : MonoBehaviour
     {
+        [SerializeField]
+        private UnityEvent OnFreeObject = default;
+
         private ScriptablePool pool;
 
+        // Redundant with "OnFreeObject", but helps the developer differentiate between editor assigned events and programatically assigned events
         public delegate void OnFreedHandler();
         public event OnFreedHandler OnFreed;
 
@@ -20,6 +25,7 @@ namespace GamedevsToolbox.ScriptableArchitecture.Pools
             if (gameObject.activeInHierarchy)
             {
                 OnFreed?.Invoke();
+                OnFreeObject?.Invoke();
                 OnFreed = null;
                 if (pool != null)
                 {

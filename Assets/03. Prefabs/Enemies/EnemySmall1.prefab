@@ -1,5 +1,60 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5211421604570837934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4256860109316869285}
+  - component: {fileID: 8021221791208268863}
+  m_Layer: 8
+  m_Name: BulletEmitter2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4256860109316869285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5211421604570837934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.51, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9097368195270066051}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8021221791208268863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5211421604570837934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03d2975e559e89499666e00c0e47a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 4256860109316869285}
+  bulletContainerReference: {fileID: 11400000, guid: f8333d2313d691545bdfa426e6fec373, type: 2}
+  playerTransformReference: {fileID: 11400000, guid: 7b20b8e6dd30b8c4ba763174d6c450b3, type: 2}
+  startDelay: 0.5
+  facePlayer: 1
+  numberOfBursts: 2
+  timeBetweenBursts: 1
+  bulletsPerStack: 3
+  minMaxStackSpeed: {x: 30, y: 40}
+  arcRows: 1
+  arcAngle: 0
+  angleOffset: 0
 --- !u!1001 &8769945609762849356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9,12 +64,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 516386892277468134, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: emitters.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 516386892277468134, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: emitters.Array.data[0]
       value: 
       objectReference: {fileID: 5304569335630924410}
+    - target: {fileID: 516386892277468134, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
+      propertyPath: emitters.Array.data[1]
+      value: 
+      objectReference: {fileID: 8021221791208268863}
     - target: {fileID: 569890126750044175, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: m_Size.x
       value: 4.50004
@@ -134,6 +193,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2836507839653488380, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
   m_PrefabInstance: {fileID: 8769945609762849356}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &9097368195270066051 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 573438458298334671, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
+  m_PrefabInstance: {fileID: 8769945609762849356}
+  m_PrefabAsset: {fileID: 0}
 --- !u!54 &485927874649103013 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 9154489570195331305, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
@@ -149,36 +213,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3491716007013740070, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
   m_PrefabInstance: {fileID: 8769945609762849356}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6098757849936951609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6838812564227450032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94a3c8cc5eb58064495a350ffecf3c46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBody: {fileID: 485927874649103013}
-  speed: 10
-  alwaysUpdateVelocity: 1
---- !u!114 &6817340860986833389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6838812564227450032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bec5e2b0a6d488e48924294305150911, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTransformReference: {fileID: 11400000, guid: 7b20b8e6dd30b8c4ba763174d6c450b3, type: 2}
-  rotationSpeed: 50
-  maxAngle: 45
 --- !u!114 &5304569335630924410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,10 +230,50 @@ MonoBehaviour:
   playerTransformReference: {fileID: 11400000, guid: 7b20b8e6dd30b8c4ba763174d6c450b3, type: 2}
   startDelay: 0
   facePlayer: 1
-  numberOfBursts: 3
-  timeBetweenBursts: 0.5
+  numberOfBursts: 2
+  timeBetweenBursts: 1
   bulletsPerStack: 3
   minMaxStackSpeed: {x: 30, y: 40}
   arcRows: 1
   arcAngle: 0
   angleOffset: 0
+--- !u!114 &6098757849936951609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6838812564227450032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a3c8cc5eb58064495a350ffecf3c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBody: {fileID: 485927874649103013}
+  waveReference:
+    useConstant: 0
+    value: {fileID: 11400000, guid: f88a013b071f6be47bcb9a6b917651f2, type: 2}
+    constantValue: 0
+    useRandom: 0
+    minMax:
+      useConstant: 1
+      value: {fileID: 0}
+      constantValue: {x: 0, y: 0}
+  speed: 10
+  alwaysUpdateVelocity: 1
+  extraSpeedPerWave: 2
+--- !u!114 &6817340860986833389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6838812564227450032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec5e2b0a6d488e48924294305150911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransformReference: {fileID: 11400000, guid: 7b20b8e6dd30b8c4ba763174d6c450b3, type: 2}
+  rotationSpeed: 50
+  maxAngle: 45

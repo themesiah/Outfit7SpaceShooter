@@ -44,3 +44,4 @@ of what have you done and main challenges you had at development of the game.
 23. Visual feedback (explosion on deaths, mini-explosion on bullet hit, bomb explosion) :x:
 24. SFX :x:
 25. BGM :x:
+26. Tutorial screen :x:

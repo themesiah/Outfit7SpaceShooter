@@ -19,6 +19,8 @@ namespace GamedevsToolbox.ScriptableArchitecture.Pools
             // We check if it is active to not trigger an unity error in case we try to "free" it twice in a frame
             if (gameObject.activeInHierarchy)
             {
+                OnFreed?.Invoke();
+                OnFreed = null;
                 if (pool != null)
                 {
                     pool.FreeInstance(gameObject);
@@ -26,8 +28,6 @@ namespace GamedevsToolbox.ScriptableArchitecture.Pools
                 {
                     Destroy(gameObject);
                 }
-                OnFreed?.Invoke();
-                OnFreed = null;
             }
         }
     }

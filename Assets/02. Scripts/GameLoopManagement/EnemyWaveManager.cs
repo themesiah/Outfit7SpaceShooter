@@ -43,6 +43,12 @@ namespace SpaceShooter.Management
         [Tooltip("Amount of enemies to kill to spawn an obtainable")]
         private int killsToObtainable = 10;
 
+#if UNITY_EDITOR
+        [Header("Debug")]
+        [SerializeField]
+        private bool showDebugGUI = default;
+#endif
+
         private int totalEnemiesSpawned = 0;
         private int totalEnemiesFinished = 0;
         private bool finishedSpawning = false;
@@ -50,6 +56,15 @@ namespace SpaceShooter.Management
         private int currentWavePoints = 0;
 
         private int obtainableKillCounter = 0;
+
+        public int WavePoints => currentWavePoints;
+        public int UsedWavePoints => currentPointsUsed;
+        public int RemainingWavePoints => WavePoints - UsedWavePoints;
+        public int EnemiesSpawned => totalEnemiesSpawned;
+        public int EnemiesFinished => totalEnemiesFinished;
+        public bool StillSpawning => !finishedSpawning;
+        public int EnemiesRemaining => EnemiesSpawned - EnemiesFinished;
+        public int ObtainableKillCounter => obtainableKillCounter;
 
         private IEnumerator Start()
         {
@@ -86,14 +101,17 @@ namespace SpaceShooter.Management
                 enemyAndFormation = GetValidEnemy(currentWavePoints - currentPointsUsed);
             }
             finishedSpawning = true;
-
+            if (CheckWaveFinished())
+            {
+                NewWave();
+            }
         }
 
         private void OnEnemyFinished()
         {
             totalEnemiesFinished++;
             obtainableKillCounter++;
-            if (totalEnemiesFinished == totalEnemiesSpawned && finishedSpawning == true)
+            if (CheckWaveFinished())
             {
                 NewWave();
             } else
@@ -105,6 +123,11 @@ namespace SpaceShooter.Management
                     obtainableSpawner.SpawnRandomObtainable();
                 }
             }
+        }
+
+        private bool CheckWaveFinished()
+        {
+            return totalEnemiesFinished == totalEnemiesSpawned && finishedSpawning == true;
         }
 
         private EnemyAndFormationPair GetValidEnemy(int maxPoints)
@@ -140,5 +163,26 @@ namespace SpaceShooter.Management
             int index = Random.Range(0, candidateList.Count);
             return new EnemyAndFormationPair { spawnConfiguration = candidateList[index], formationIndex = formationIndexes[index], formation = candidateList[index].SpawnFormations[formationIndexes[index]] };
         }
+
+#if UNITY_EDITOR
+        private void OnGUI()
+        {
+            if (!showDebugGUI)
+                return;
+            GUILayout.Space(200f);
+            GUIStyle style = new GUIStyle();
+            style.fontSize = 32;
+            style.normal.textColor = Color.white;
+            style.contentOffset = Vector2.one * 20f;
+            GUILayout.Label(string.Format("Wave Points: {0}", WavePoints), style);
+            GUILayout.Label(string.Format("Wave Used Points: {0}", UsedWavePoints), style);
+            GUILayout.Label(string.Format("Wave Remaining Points: {0}", RemainingWavePoints), style);
+            GUILayout.Label(string.Format("Spawned Enemies: {0}", EnemiesSpawned), style);
+            GUILayout.Label(string.Format("Enemies Finished: {0}", EnemiesFinished), style);
+            GUILayout.Label(string.Format("Enemies Remaining: {0}", EnemiesRemaining), style);
+            GUILayout.Label(string.Format("Still Spawning: {0}", StillSpawning), style);
+            GUILayout.Label(string.Format("Obtainable Kill Count: {0}", ObtainableKillCounter), style);
+        }
+#endif
     }
 }

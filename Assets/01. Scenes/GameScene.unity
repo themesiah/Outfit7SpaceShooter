@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.2962604, g: 0.18437666, b: 0.32160044, a: 1}
+  m_IndirectSpecularColor: {r: 0.18850741, g: 0.12481687, b: 0.22226623, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -273,7 +273,8 @@ MonoBehaviour:
   wavePointsMultiplier: 0.1
   basePoints: 10000
   timeBetweenEnemies: 5
-  killsToObtainable: 10
+  killsToObtainable: 15
+  showDebugGUI: 0
 --- !u!114 &97818229
 MonoBehaviour:
   m_ObjectHideFlags: 0

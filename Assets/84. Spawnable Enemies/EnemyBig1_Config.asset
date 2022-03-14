@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyBig1_Config
   m_EditorClassIdentifier: 
   spawnableName: Big1
-  spawnWeight: 7
+  spawnWeight: 15
   points: 1000
   poolReference: {fileID: 11400000, guid: cadf0c472ff6be84e953274c7295d1e4, type: 2}
   spawnConfigurations:

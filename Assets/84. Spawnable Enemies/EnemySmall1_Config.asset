@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemySmall1_Config
   m_EditorClassIdentifier: 
   spawnableName: Small1
-  spawnWeight: 5
+  spawnWeight: 15
   points: 400
   poolReference: {fileID: 11400000, guid: 85fd323d2b95b284aab53b8dea2bdcb1, type: 2}
   spawnConfigurations:

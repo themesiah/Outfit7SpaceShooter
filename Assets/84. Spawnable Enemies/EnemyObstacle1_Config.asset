@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyObstacle1_Config
   m_EditorClassIdentifier: 
   spawnableName: Obstacle1
-  spawnWeight: 1
+  spawnWeight: 5
   points: 50
   poolReference: {fileID: 11400000, guid: 7d1306e550bd636429ed2e3ac07434d8, type: 2}
   spawnConfigurations:

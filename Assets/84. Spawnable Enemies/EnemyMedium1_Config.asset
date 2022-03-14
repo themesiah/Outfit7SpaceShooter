@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyMedium1_Config
   m_EditorClassIdentifier: 
   spawnableName: Medium1
-  spawnWeight: 6
+  spawnWeight: 15
   points: 100
   poolReference: {fileID: 11400000, guid: db93ef6a55a05d440acac5b3f8468088, type: 2}
   spawnConfigurations:

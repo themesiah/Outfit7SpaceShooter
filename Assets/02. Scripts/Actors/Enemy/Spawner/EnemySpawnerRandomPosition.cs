@@ -1,8 +1,9 @@
+using SpaceShooter.Scenario;
 using UnityEngine;
 
 namespace SpaceShooter.Actors
 {
-    public class EnemySpawnerRandomPosition : MonoBehaviour
+    public class EnemySpawnerRandomPosition : MonoBehaviour, IRandomPositionObtainer
     {
         [SerializeField]
         private Transform[] spawnPoints = default;

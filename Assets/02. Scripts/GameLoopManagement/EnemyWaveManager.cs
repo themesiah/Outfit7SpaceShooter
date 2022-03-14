@@ -3,7 +3,7 @@ using SpaceShooter.Actors;
 using GamedevsToolbox.ScriptableArchitecture.Values;
 using System.Collections.Generic;
 using System.Collections;
-using GamedevsToolbox.ScriptableArchitecture.Pools;
+using SpaceShooter.Obtainables;
 
 namespace SpaceShooter.Management
 {
@@ -26,6 +26,9 @@ namespace SpaceShooter.Management
         [SerializeField]
         private ScriptableIntReference currentWaveReference = default;
 
+        [SerializeField]
+        private ObtainableSpawner obtainableSpawner = default;
+
         [Header("Configuration")]
         [SerializeField]
         private float wavePointsMultiplier = default;
@@ -36,11 +39,17 @@ namespace SpaceShooter.Management
         [SerializeField]
         private float timeBetweenEnemies = default;
 
+        [SerializeField]
+        [Tooltip("Amount of enemies to kill to spawn an obtainable")]
+        private int killsToObtainable = 10;
+
         private int totalEnemiesSpawned = 0;
         private int totalEnemiesFinished = 0;
         private bool finishedSpawning = false;
         private int currentPointsUsed = 0;
         private int currentWavePoints = 0;
+
+        private int obtainableKillCounter = 0;
 
         private IEnumerator Start()
         {
@@ -83,9 +92,18 @@ namespace SpaceShooter.Management
         private void OnEnemyFinished()
         {
             totalEnemiesFinished++;
+            obtainableKillCounter++;
             if (totalEnemiesFinished == totalEnemiesSpawned && finishedSpawning == true)
             {
                 NewWave();
+            } else
+            {
+                // We put in the else because we don't want to spawn an obtainable when changing waves
+                if (obtainableKillCounter >= killsToObtainable)
+                {
+                    obtainableKillCounter = 0;
+                    obtainableSpawner.SpawnRandomObtainable();
+                }
             }
         }
 

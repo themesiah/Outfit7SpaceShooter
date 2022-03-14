@@ -18,10 +18,10 @@ MonoBehaviour:
   poolReference: {fileID: 11400000, guid: 7d1306e550bd636429ed2e3ac07434d8, type: 2}
   spawnConfigurations:
   - rows: 1
-    columns: 5
+    columns: 3
     xSeparation: 5
     ySeparation: 5
-  - rows: 5
+  - rows: 3
     columns: 1
     xSeparation: 5
     ySeparation: 5

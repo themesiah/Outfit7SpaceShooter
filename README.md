@@ -37,7 +37,7 @@ of what have you done and main challenges you had at development of the game.
 16. Enemy spawn :white_check_mark:
 17. Enemy formations (group spawning) :white_check_mark:
 18. High scores :white_check_mark:
-19. Spawn powerups :x:
+19. Spawn powerups :white_check_mark:
 20. Destroyable enemy bullets :x:
 21. Raise difficulty over time :x:
 22. Evasive enemy (high health, moves evading your forward, big threat) :x:

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using SpaceShooter.Extensions;
 using System.Collections;
 using GamedevsToolbox.ScriptableArchitecture.Sets;
@@ -56,6 +57,10 @@ namespace SpaceShooter.WeaponsAndBullets
         [Tooltip("The resulting will have this number added. Useful for using multiple arc burst emitters and doing nice patterns")]
         private float angleOffset = 0f;
 
+        [Header("Events")]
+        [SerializeField]
+        private UnityEvent OnBurst = default;
+
         private float angleStart;
         private float angleStep;
         private Vector3 tempEuler;
@@ -92,6 +97,7 @@ namespace SpaceShooter.WeaponsAndBullets
 
             for (int w = 0; w < numberOfBursts; ++w)
             {
+                OnBurst?.Invoke();
                 for (int i = 0; i < bulletsPerStack; ++i)
                 {
                     for (int j = 0; j < arcRows; ++j)

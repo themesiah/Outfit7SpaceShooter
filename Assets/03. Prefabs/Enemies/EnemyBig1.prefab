@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: emitters.Array.data[0]
       value: 
       objectReference: {fileID: 5245076815147612178}
+    - target: {fileID: 516386892277468134, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
+      propertyPath: OnEmitted.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 573438458298334671, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -87,6 +91,10 @@ PrefabInstance:
       propertyPath: OnVisible.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5006453214269466766, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
+      propertyPath: poolReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f0d9ff9375ae3be4cb472df41ca0993f, type: 2}
     - target: {fileID: 5162993787547407804, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -140,30 +148,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3491716007013740070, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
   m_PrefabInstance: {fileID: 1777237055084471947}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5245076815147612178
+--- !u!114 &9211909107516951417 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7457192603566697970, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
+  m_PrefabInstance: {fileID: 1777237055084471947}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4118325685312666459}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a03d2975e559e89499666e00c0e47a30, type: 3}
+  m_Script: {fileID: 11500000, guid: bb9d05ea7d1c2fd4bb69084c3e6c9bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 2945093134685685933}
-  bulletContainerReference: {fileID: 11400000, guid: a6e771eb0d685334189bcb6afecbea14, type: 2}
-  playerTransformReference: {fileID: 0}
-  startDelay: 0
-  facePlayer: 0
-  numberOfBursts: 3
-  timeBetweenBursts: 0.3
-  bulletsPerStack: 3
-  minMaxStackSpeed: {x: 30, y: 50}
-  arcRows: 3
-  arcAngle: 45
-  angleOffset: 0
 --- !u!114 &6352866662754252332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +211,46 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5245076815147612178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4118325685312666459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03d2975e559e89499666e00c0e47a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 2945093134685685933}
+  bulletContainerReference: {fileID: 11400000, guid: a6e771eb0d685334189bcb6afecbea14, type: 2}
+  playerTransformReference: {fileID: 0}
+  startDelay: 0
+  facePlayer: 0
+  numberOfBursts: 3
+  timeBetweenBursts: 0.3
+  bulletsPerStack: 3
+  minMaxStackSpeed: {x: 30, y: 50}
+  arcRows: 3
+  arcAngle: 45
+  angleOffset: 0
+  OnBurst:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9211909107516951417}
+        m_TargetAssemblyTypeName: GamedevsToolbox.Audio.AudioSourceWrapper, GamedevsToolbox
+        m_MethodName: PlayClip
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: bbd2eeffc2a4fae4ca8c6bf9b531b751, type: 2}
+          m_ObjectArgumentAssemblyTypeName: GamedevsToolbox.Audio.ScriptableAudioClip,
+            GamedevsToolbox
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using SpaceShooter.WeaponsAndBullets;
 
 namespace SpaceShooter.Actors
@@ -10,6 +11,9 @@ namespace SpaceShooter.Actors
 
         [SerializeField]
         private float burstDelay = 1f;
+
+        [SerializeField]
+        private UnityEvent OnEmitted = default;
 
         float timer = 0f;
 
@@ -36,6 +40,7 @@ namespace SpaceShooter.Actors
             {
                 emitter.Emit();
             }
+            OnEmitted?.Invoke();
         }
     }
 }

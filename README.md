@@ -41,8 +41,8 @@ of what have you done and main challenges you had at development of the game.
 20. Destroyable enemy bullets :white_check_mark:
 21. Raise difficulty over time :white_check_mark:
 22. Evasive enemy (high health, moves evading your forward, big threat) :white_check_mark:
-23. Visual feedback (explosion on deaths, mini-explosion on bullet hit, bomb explosion) :x:
-24. SFX :x:
-25. BGM :x:
+23. Visual feedback (explosion on deaths, mini-explosion on bullet hit, bomb explosion) :white_check_mark:
+24. SFX :white_check_mark:
+25. BGM :white_check_mark:
 26. Tutorial screen :x:
-27. UI prepared for gamepad
+27. UI prepared for gamepad :x:

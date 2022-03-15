@@ -49,16 +49,16 @@ MonoBehaviour:
     m_Address: Pools/EnemyBulletPool
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b7242cd6d1f42d44b8e50ec334fd431e
+    m_Address: Scenes/MainMenu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 9fc0d4010bbf28b4594072e72b8655ab
     m_Address: Scenes/GameScene
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b5498fc492a5885488d63d6744e4733b
     m_Address: Scenes/StressTestScene
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: b7242cd6d1f42d44b8e50ec334fd431e
-    m_Address: Scenes/MainMenu
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 81d6bfeeb4148c741832d519aa4a1c9c
@@ -86,19 +86,19 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 070829b08f85ffc4c93330aab7139525
-    m_Address: Assets/03. Prefabs/Enemies/EnemyMedium2.prefab
+    m_Address: Enemies/EnemyMedium2
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: ea8217d78f42d324f9d8a92aa7a4e63e
-    m_Address: Assets/03. Prefabs/Effects/ExplosionSmall.prefab
+    m_Address: Effects/ExplosionSmall
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: da309425f188808458cd3b03616b33c0
-    m_Address: Assets/03. Prefabs/Effects/ExplosionMedium.prefab
+    m_Address: ExplosionMedium
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 9df2e0df27a294b4ea000a87e7c6832f
-    m_Address: Assets/03. Prefabs/Effects/ExplosionBig.prefab
+    m_Address: Effects/ExplosionBig
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

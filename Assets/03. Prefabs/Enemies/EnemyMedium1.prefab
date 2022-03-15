@@ -145,6 +145,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3491716007013740070, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
   m_PrefabInstance: {fileID: 6779842453557544318}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4137563289731885196 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7457192603566697970, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
+  m_PrefabInstance: {fileID: 6779842453557544318}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9d05ea7d1c2fd4bb69084c3e6c9bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2192078203925532103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,3 +205,19 @@ MonoBehaviour:
   arcRows: 1
   arcAngle: 0
   angleOffset: 0
+  OnBurst:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4137563289731885196}
+        m_TargetAssemblyTypeName: GamedevsToolbox.Audio.AudioSourceWrapper, GamedevsToolbox
+        m_MethodName: PlayClip
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 42383a681ae7058429d6378ba0227171, type: 2}
+          m_ObjectArgumentAssemblyTypeName: GamedevsToolbox.Audio.ScriptableAudioClip,
+            GamedevsToolbox
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

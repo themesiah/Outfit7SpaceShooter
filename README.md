@@ -44,5 +44,6 @@ of what have you done and main challenges you had at development of the game.
 23. Visual feedback (explosion on deaths, mini-explosion on bullet hit, bomb explosion) :white_check_mark:
 24. SFX :white_check_mark:
 25. BGM :white_check_mark:
-26. Tutorial screen :x:
+26. Tutorial screen :white_check_mark:
 27. UI prepared for gamepad :x:
+28. Environment enemy ships on the background (with cool shader) :x:

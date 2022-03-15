@@ -30,6 +30,8 @@ namespace GamedevsToolbox.Utils
 #elif UNITY_STANDALONE
 			return Application.dataPath + "/../" + filename;
             //return System.IO.Path.Combine(Application.dataPath, "/../", filename);
+#elif UNITY_ANDROID
+			return Application.persistentDataPath + filename;
 #endif
 		}
 

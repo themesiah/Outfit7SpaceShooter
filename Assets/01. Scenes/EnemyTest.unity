@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.31769183, g: 0.20102155, b: 0.3458053, a: 1}
+  m_IndirectSpecularColor: {r: 0.30846593, g: 0.19323972, b: 0.33484644, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -684,6 +684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: 7b74df77b2034ae479a6ce0892291bfb, type: 3}
   m_PointAction: {fileID: -7103844366836001242, guid: 7b74df77b2034ae479a6ce0892291bfb, type: 3}
   m_MoveAction: {fileID: -4206988197664724112, guid: 7b74df77b2034ae479a6ce0892291bfb, type: 3}
@@ -1214,12 +1215,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376892119}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11bde092bac70aa41a1d87e6711f0625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pollingFrequency: 300
+  pollingFrequency: 600
 --- !u!1 &411114394
 GameObject:
   m_ObjectHideFlags: 0

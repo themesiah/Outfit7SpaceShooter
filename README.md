@@ -45,5 +45,7 @@ of what have you done and main challenges you had at development of the game.
 24. SFX :white_check_mark:
 25. BGM :white_check_mark:
 26. Tutorial screen :white_check_mark:
-27. UI prepared for gamepad :x:
+27. UI prepared for gamepad :white_check_mark:
 28. Environment enemy ships on the background (with cool shader) :x:
+29. Bonus! Working in android :white_check_mark:
+30. Ship upgrades after finishing a wave :x:

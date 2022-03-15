@@ -20,14 +20,19 @@ namespace SpaceShooter.Actors
 
         public void LaunchBomb(InputAction.CallbackContext context)
         {
-            if (context.started && !paused)
+            if (context.started)
             {
-                if (bombCountReference.GetValue() > 0)
-                {
-                    bombCountReference.SetValue(bombCountReference.GetValue() - 1);
-                    bombEmitter.Emit();
-                    OnBombEmitted?.Invoke();
-                }
+                LaunchBomb();
+            }
+        }
+
+        private void LaunchBomb()
+        {
+            if (!paused && bombCountReference.GetValue() > 0)
+            {
+                bombCountReference.SetValue(bombCountReference.GetValue() - 1);
+                bombEmitter.Emit();
+                OnBombEmitted?.Invoke();
             }
         }
     }

@@ -60,7 +60,6 @@ namespace SpaceShooter.Actors
         {
             // Get movement values from input system
             var values = context.ReadValue<Vector2>();
-            Debug.LogFormat("MovX: {0} || MovY: {1}", values.x, values.y);
             // Check if we are moving. We will use this in the update to consume fuel.
             if (values.x != 0f || values.y != 0f)
                 moving = true;
@@ -102,10 +101,10 @@ namespace SpaceShooter.Actors
 
             // Change ship turning depending on where is it moving
             // First get where do you have to rotate to
-            if (lastMoveValue.y > 0f)
+            if (lastMoveValue.y > 0.1f)
             {
                 targetTurningAngle = maxTurningAngle;
-            } else if (lastMoveValue.y < 0f)
+            } else if (lastMoveValue.y < -0.1f)
             {
                 targetTurningAngle = -maxTurningAngle;
             } else

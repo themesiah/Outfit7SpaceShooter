@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 4657487754827449205}
   - component: {fileID: 516386892277468134}
   - component: {fileID: 1466695476845878492}
+  - component: {fileID: 5006453214269466766}
   m_Layer: 8
   m_Name: BaseEnemy
   m_TagString: Untagged
@@ -113,6 +114,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GamedevsToolbox.ScriptableArchitecture.Events.GameEvent,
           GamedevsToolbox
         m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5006453214269466766}
+        m_TargetAssemblyTypeName: SpaceShooter.Scenario.SpawnObjectFromPool, SpaceShooterAssembly
+        m_MethodName: Spawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -194,6 +207,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ce1fe9c4bd5c54a9216140f6aabd7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnFreeObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &516386892277468134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +245,20 @@ MonoBehaviour:
       useConstant: 1
       value: {fileID: 0}
       constantValue: {x: 0, y: 0}
+--- !u!114 &5006453214269466766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2836507839653488380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 903de685de286c84ca7e660803005ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolReference: {fileID: 11400000, guid: 67b92639c3707664b940a28091586093, type: 2}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1001 &5163710481693217020
 PrefabInstance:
   m_ObjectHideFlags: 0

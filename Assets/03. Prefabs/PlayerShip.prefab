@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 3515122927384129304}
   - component: {fileID: 4471036625344411033}
   - component: {fileID: 3336100836677077285}
+  - component: {fileID: 5806253809382262408}
   m_Layer: 6
   m_Name: PlayerShip
   m_TagString: Untagged
@@ -381,6 +382,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5806253809382262408}
+        m_TargetAssemblyTypeName: SpaceShooter.Scenario.SpawnObjectFromPool, SpaceShooterAssembly
+        m_MethodName: Spawn
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -564,6 +577,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runtimeSingle: {fileID: 11400000, guid: 7b20b8e6dd30b8c4ba763174d6c450b3, type: 2}
   component: {fileID: 7056687228302649988}
+--- !u!114 &5806253809382262408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056687228302649991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 903de685de286c84ca7e660803005ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolReference: {fileID: 11400000, guid: f0d9ff9375ae3be4cb472df41ca0993f, type: 2}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &8394111591082713046
 GameObject:
   m_ObjectHideFlags: 0

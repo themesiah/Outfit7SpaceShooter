@@ -45,3 +45,4 @@ of what have you done and main challenges you had at development of the game.
 24. SFX :x:
 25. BGM :x:
 26. Tutorial screen :x:
+27. UI prepared for gamepad

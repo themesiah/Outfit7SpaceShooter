@@ -71,10 +71,6 @@ PrefabInstance:
       propertyPath: extraHealthPerWave
       value: 60
       objectReference: {fileID: 0}
-    - target: {fileID: 1881889348606626333, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
-      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 2000
-      objectReference: {fileID: 0}
     - target: {fileID: 2143729544065346454, guid: f8f35158fd093c341bfa5abac4a6278a, type: 3}
       propertyPath: points
       value: 1000

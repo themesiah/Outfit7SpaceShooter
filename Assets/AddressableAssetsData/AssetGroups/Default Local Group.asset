@@ -89,6 +89,18 @@ MonoBehaviour:
     m_Address: Assets/03. Prefabs/Enemies/EnemyMedium2.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ea8217d78f42d324f9d8a92aa7a4e63e
+    m_Address: Assets/03. Prefabs/Effects/ExplosionSmall.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: da309425f188808458cd3b03616b33c0
+    m_Address: Assets/03. Prefabs/Effects/ExplosionMedium.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9df2e0df27a294b4ea000a87e7c6832f
+    m_Address: Assets/03. Prefabs/Effects/ExplosionBig.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d60b2ce7ad746e2478e7d30483a26f17, type: 2}
   m_SchemaSet:

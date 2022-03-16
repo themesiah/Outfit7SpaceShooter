@@ -12,7 +12,7 @@ namespace SpaceShooter.UI
 
         private void OnEnable()
         {
-            if (EventSystem.current.currentSelectedGameObject == null || EventSystem.current.currentSelectedGameObject.activeInHierarchy == false)
+            //if (EventSystem.current.currentSelectedGameObject == null || EventSystem.current.currentSelectedGameObject.activeInHierarchy == false)
             {
                 button.Select();
             }

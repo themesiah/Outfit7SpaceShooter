@@ -48,4 +48,4 @@ of what have you done and main challenges you had at development of the game.
 27. UI prepared for gamepad :white_check_mark:
 28. Environment enemy ships on the background :white_check_mark:
 29. Bonus! Working in android :white_check_mark:
-30. Ship upgrades after finishing a wave :x:
+30. Ship upgrades after finishing a wave :white_check_mark:

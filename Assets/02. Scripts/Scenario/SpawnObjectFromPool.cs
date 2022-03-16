@@ -13,7 +13,8 @@ namespace SpaceShooter.Scenario
 
         public void Spawn()
         {
-            poolReference.Get().pool.GetInstance(instancePosition: transform.position + offset);
+            if (poolReference != null && poolReference.Get() != null && poolReference.Get().pool != null)
+                poolReference.Get().pool.GetInstance(instancePosition: transform.position + offset);
         }
     }
 }

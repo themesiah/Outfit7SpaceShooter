@@ -66,6 +66,8 @@ namespace SpaceShooter.Actors
         private IEnumerator ZigZagCoroutine()
         {
             yield return null;
+            if (Random.value < 0.5f)
+                nextIsMaxY = !nextIsMaxY;
             onResumeZigZag?.Invoke();
             int zigZagsDone = 0;
             while (zigZagsDone < numberOfZigZags) {

@@ -4,6 +4,7 @@ using GamedevsToolbox.ScriptableArchitecture.Values;
 using System.Collections.Generic;
 using System.Collections;
 using SpaceShooter.Obtainables;
+using GamedevsToolbox.ScriptableArchitecture.Events;
 
 namespace SpaceShooter.Management
 {
@@ -43,6 +44,10 @@ namespace SpaceShooter.Management
         [Tooltip("Amount of enemies to kill to spawn an obtainable")]
         private int killsToObtainable = 10;
 
+        [Header("Events")]
+        [SerializeField]
+        private GameEvent waveFinishedEvent = default;
+
 #if UNITY_EDITOR
         [Header("Debug")]
         [SerializeField]
@@ -74,6 +79,7 @@ namespace SpaceShooter.Management
 
         public void NewWave()
         {
+            Debug.Log("Starting new wave");
             currentWaveReference.SetValue(currentWaveReference.GetValue() + 1);
             totalEnemiesSpawned = 0;
             totalEnemiesFinished = 0;
@@ -103,7 +109,7 @@ namespace SpaceShooter.Management
             finishedSpawning = true;
             if (CheckWaveFinished())
             {
-                NewWave();
+                FinishWave();
             }
         }
 
@@ -113,7 +119,7 @@ namespace SpaceShooter.Management
             obtainableKillCounter++;
             if (CheckWaveFinished())
             {
-                NewWave();
+                FinishWave();
             } else
             {
                 // We put in the else because we don't want to spawn an obtainable when changing waves
@@ -128,6 +134,12 @@ namespace SpaceShooter.Management
         private bool CheckWaveFinished()
         {
             return totalEnemiesFinished == totalEnemiesSpawned && finishedSpawning == true;
+        }
+
+        private void FinishWave()
+        {
+            Debug.Log("Finished wave");
+            waveFinishedEvent?.Raise();
         }
 
         private EnemyAndFormationPair GetValidEnemy(int maxPoints)

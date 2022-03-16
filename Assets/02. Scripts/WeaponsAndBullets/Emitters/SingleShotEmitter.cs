@@ -11,8 +11,11 @@ namespace SpaceShooter.WeaponsAndBullets
 
         public override void Emit()
         {
-            GameObject go = bulletContainer.pool.GetInstance(null, spawnPoint.position, spawnPoint.rotation);
-            go.GetComponent<IBulletMovement>()?.StartMovement();
+            if (gameObject.activeInHierarchy)
+            {
+                GameObject go = bulletContainer.pool.GetInstance(null, spawnPoint.position, spawnPoint.rotation);
+                go.GetComponent<IBulletMovement>()?.StartMovement();
+            }
         }
     }
 }
